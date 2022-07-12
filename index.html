@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="padding: 0; margin:0;">
+
+    <!-- POP CONTENT -->
+    <div style="width: 100vw; max-width: 580px;">
+        <!-- PC link -->
+        <a id="pc" style="display:none;" href="http://sv.lime-survey.co.kr/?ACCESS_KEY=c75f89eb29aa4cb681b9&grpid=rdn1&UID" target="_blank">
+            <img style="width:100%;" src="./bg_popup.png" alt="">
+        </a>
+        <!-- Mobile link -->
+        <a id="mobile" style="display:none;" href="http://sv.lime-survey.co.kr/?ACCESS_KEY=c75f89eb29aa4cb681b9&grpid=rdn2&UID" target="_blank">
+            <img style="width:100%;" src="./bg_popup.png" alt="">
+        </a>
+    </div>
+    
+    <script type="text/javascript">
+        var filter = "win16|win32|win64|mac"; 
+        const pcClass = document.getElementById('pc');
+        const mobileClass = document.getElementById('mobile');
+        if(navigator.platform){
+            if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+                console.log('mobile');
+                pcClass.style.display = 'block';
+            } else{
+                console.log("PC");
+                mobileClass.style.display = 'block';
+            }
+        }
+    </script>
+
+
+</body>
+</html>
