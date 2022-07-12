@@ -26,10 +26,10 @@
         const mobileClass = document.getElementById('mobile');
         if(navigator.platform){
             if(0 > filter.indexOf(navigator.platform.toLowerCase())){
-                console.log('mobile');
+                console.log('pc');
                 pcClass.style.display = 'block';
             } else{
-                console.log("PC");
+                console.log("mobile");
                 mobileClass.style.display = 'block';
             }
         }
